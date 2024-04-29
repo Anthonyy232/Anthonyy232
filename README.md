@@ -3,9 +3,6 @@
 
 Hi there! I'm Anthony La, a third year computer science student at UCLA with an interest in software engineering. 
 
-- 🌱 I’m currently learning Android mobile development using Jetpack Compose library.
-- 🔭 I have an interest in backend development
-
 <br>
 <h2 align="center">Frequently Used Technologies</h2>
 
