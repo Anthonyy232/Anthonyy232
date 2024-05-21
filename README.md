@@ -1,7 +1,7 @@
 <br>
 <h2 align="center">Introduction</h2>
 
-<p align="center">Hi there! I'm Anthony La, a third year computer science student at UCLA with an interest in software engineering.</p>
+<p align="center">Hi there! I'm Anthony, a fourth year computer science student at UCLA with an interest in software engineering.</p>
 
 <br>
 <h2 align="center">Frequently Used Technologies</h2>
