@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">Hotaru</title>
+  <g id="symbol">
+    <path fill="#FFF6E8" d="M69 40 A15 15 0 0 1 99 40 V105.01 A55 55 0 0 1 179 154 A15 15 0 0 1 149 154 A25 25 0 0 0 99 154 V212 A15 15 0 0 1 69 212 Z"/>
+    <circle fill="#FFBE7A" cx="164" cy="203" r="24"/>
+  </g>
+</svg>
