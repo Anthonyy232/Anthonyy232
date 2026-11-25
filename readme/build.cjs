@@ -14,21 +14,24 @@ const font = (style, file) => `@font-face { font-family: 'Instrument Serif'; fon
   src: url(${dataUri(path.join(root, 'fonts', file), 'font/woff2')}) format('woff2'); }`;
 
 const projects = [
-  { id: 'hare', name: 'Hare', logo: () => svg('hare-logo.svg'), accent: ['#2563eb', '#8ab4ff'],
-    title: 'any video,<br>at <i>your</i> speed', line: 'Speed control, keyboard shortcuts and two-tab sync for any video or audio on the web.',
-    tag: 'Browser extension · Chrome, Firefox, Edge', crop: { s: 1, x: 560, y: 455 } },
   { id: 'nagi', name: 'Nagi', logo: () => svg('nagi-logo.svg'), accent: ['#26854d', '#63c488'],
     title: 'a <i>calm</i> home<br>for your music', line: 'A fast, private music player for your local library, with Navidrome and Jellyfin streaming.',
     tag: 'Desktop app · Windows 10 and 11', crop: { s: 0.62, x: 150, y: 440 } },
-  { id: 'paperize', name: 'Paperize', logo: () => svg('paperize-logo.svg'), tile: true, accent: ['#c2255c', '#ff8fb0'],
-    title: 'a fresh wallpaper,<br><i>right on time</i>', line: 'Rotates your own albums on the home and lock screen on a schedule, with blur, dim and vignette.',
-    tag: 'Android app · Android 12 and newer', crop: { s: 1, x: 340, y: 460 } },
   { id: 'hotaru', name: 'Hotaru', logo: dark => svg(`hotaru-logo-${dark ? 'dark' : 'light'}.svg`), accent: ['#b85a0e', '#ffbe7a'],
     title: 'your library,<br>on a <i>giant</i> screen', line: 'A Jellyfin app: browse in a window, then watch in an immersive cinema.',
     tag: 'Headset app · Meta Quest 3 and 3S', crop: { s: 1, x: 150, y: 460 } },
+  { id: 'koma', name: 'Koma', logo: () => svg('koma-logo.svg'), accent: ['#d93a24', '#ff8566'],
+    title: 'your screen,<br><i>framed</i>', line: 'A screenshot tool: freeze the desktop, drag an area, mark it up, then copy or save it.',
+    tag: 'Desktop app · Windows 10 and 11', crop: { s: 1, x: 150, y: 400 } },
+  { id: 'paperize', name: 'Paperize', logo: () => svg('paperize-logo.svg'), tile: true, accent: ['#c2255c', '#ff8fb0'],
+    title: 'a fresh wallpaper,<br><i>right on time</i>', line: 'Rotates your own albums on the home and lock screen on a schedule, with blur, dim and vignette.',
+    tag: 'Android app · Android 12 and newer', crop: { s: 1, x: 340, y: 460 } },
+  { id: 'hare', name: 'Hare', logo: () => svg('hare-logo.svg'), accent: ['#2563eb', '#8ab4ff'],
+    title: 'any video,<br>at <i>your</i> speed', line: 'Speed control, keyboard shortcuts and two-tab sync for any video or audio on the web.',
+    tag: 'Browser extension · Chrome, Firefox, Edge', crop: { s: 1, x: 560, y: 455 } },
   { id: 'modernlrc', name: 'ModernLrc', logo: () => svg('modernlrc-logo.svg'), accent: ['#c2410c', '#ff8a5c'],
     title: 'every lyric,<br><i>on time</i>', line: 'A fast LRC lyrics parser and writer, with word timing, duet voices and diagnostics instead of exceptions.',
-    tag: 'Library · .NET 10 on NuGet', crop: { s: 0.95, x: 170, y: 445 } },
+    tag: 'Library · .NET 10 and 11 on NuGet', crop: { s: 0.95, x: 170, y: 445 } },
 ];
 
 const base = (dark, accent) => `<!doctype html><meta charset="utf-8">

@@ -13,7 +13,7 @@ npm ci && npx playwright install chromium
 node readme/build.cjs ../Anthonyy232
 ```
 
-That rewrites all 12 PNGs (1792 px wide, 1280 CSS px at 1.4x) in `../Anthonyy232/.github/readme/`. Commit the changed ones on `main`. No network is needed after the install: the fonts and every input are on this branch.
+That rewrites all 14 PNGs (1792 px wide, 1280 CSS px at 1.4x) in `../Anthonyy232/.github/readme/`. Commit the changed ones on `main`. No network is needed after the install: the fonts and every input are on this branch.
 
 ## Layout
 
@@ -32,6 +32,7 @@ When a project's logo or README hero changes, copy the new file over the old one
 | `paperize-logo.svg` | [Paperize `app/src/main/ic_launcher.svg`](https://raw.githubusercontent.com/Anthonyy232/Paperize/master/app/src/main/ic_launcher.svg) |
 | `hotaru-logo-light.svg` | [Hotaru `branding/hotaru-symbol-on-light.svg`](https://raw.githubusercontent.com/Anthonyy232/Hotaru/main/branding/hotaru-symbol-on-light.svg) |
 | `hotaru-logo-dark.svg` | [Hotaru `branding/hotaru-symbol.svg`](https://raw.githubusercontent.com/Anthonyy232/Hotaru/main/branding/hotaru-symbol.svg) |
+| `koma-logo.svg` | [Koma `assets/logo.svg`](https://raw.githubusercontent.com/Anthonyy232/Koma/main/assets/logo.svg) |
 | `modernlrc-logo.svg` | [ModernLrcParser `assets/logo.svg`](https://raw.githubusercontent.com/Anthonyy232/ModernLrcParser/main/assets/logo.svg) |
 | `<project>-hero-<light\|dark>.png` | `.github/readme/hero-<light\|dark>.png` on each project's default branch, for example [Hare's](https://raw.githubusercontent.com/Anthonyy232/Hare/main/.github/readme/hero-light.png) |
 
@@ -39,15 +40,16 @@ With the project repos cloned side by side, this does all of it:
 
 ```bash
 export MSYS_NO_PATHCONV=1   # only for Git Bash on Windows
-C=..   # folder holding Hare, Nagi, Paperize, Hotaru and ModernLrcParser
+C=..   # folder holding Hare, Nagi, Paperize, Hotaru, Koma and ModernLrcParser
 I=readme/inputs
 git -C $C/Hare show origin/main:assets/logo.svg > $I/hare-logo.svg
 git -C $C/Nagi show origin/master:media/AppLogo.svg > $I/nagi-logo.svg
 git -C $C/Paperize show origin/master:app/src/main/ic_launcher.svg > $I/paperize-logo.svg
 git -C $C/Hotaru show origin/main:branding/hotaru-symbol-on-light.svg > $I/hotaru-logo-light.svg
 git -C $C/Hotaru show origin/main:branding/hotaru-symbol.svg > $I/hotaru-logo-dark.svg
+git -C $C/Koma show origin/main:assets/logo.svg > $I/koma-logo.svg
 git -C $C/ModernLrcParser show origin/main:assets/logo.svg > $I/modernlrc-logo.svg
-for p in Hare:main:hare Nagi:master:nagi Paperize:master:paperize Hotaru:main:hotaru ModernLrcParser:main:modernlrc; do
+for p in Hare:main:hare Nagi:master:nagi Paperize:master:paperize Hotaru:main:hotaru Koma:main:koma ModernLrcParser:main:modernlrc; do
   IFS=: read r b n <<< "$p"
   for t in light dark; do git -C $C/$r show "origin/$b:.github/readme/hero-$t.png" > $I/$n-hero-$t.png; done
 done
